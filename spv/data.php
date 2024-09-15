@@ -7,6 +7,7 @@
             <thead>
                 <tr>
                     <th class="text-center">No</th>
+                    <th class="text-center">NIK</th>
                     <th class="text-center">Nama Karyawan</th>
                     <th class="text-center">Kedisiplinan</th>
                     <th class="text-center">Prestasi</th>
@@ -15,11 +16,12 @@
             <tbody>
                 <?php
                 $no = 1;
-                $query = "SELECT * FROM tb_karyawan LIMIT 5";
+                $query = "SELECT * FROM tb_karyawan";
                 $execute = mysqli_query($conn, $query);
                 while ($result = mysqli_fetch_array($execute)) { ?>
                     <tr id="data">
                         <td class="text-center"><?= $no ?></td>
+                        <td class="text-center"><?= htmlspecialchars($result['nik']) ?></td>
                         <td class="text-center"><?= htmlspecialchars($result['nama_karyawan']) ?></td>
                         <td class="text-center">
                             <?php

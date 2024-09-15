@@ -1,3 +1,23 @@
+Sederhana dan Intuitif: Algoritma SMART mudah dipahami dan diterapkan. Ini membuatnya sangat cocok untuk digunakan dalam situasi di mana pengguna mungkin tidak memiliki latar belakang teknis yang kuat.
+
+Keterlibatan Pengguna: Pengguna dapat dengan mudah menentukan bobot untuk setiap kriteria berdasarkan preferensi dan prioritas mereka. Hal ini memungkinkan penyesuaian yang fleksibel sesuai dengan kebutuhan spesifik.
+
+Efisiensi: Proses penilaian dan pengambilan keputusan dapat dilakukan dengan cepat karena algoritma ini tidak memerlukan perhitungan yang rumit atau prosedur yang berbelit-belit.
+
+Transparansi: Hasil penilaian dapat dengan mudah ditelusuri kembali ke bobot dan nilai kriteria, sehingga pengguna dapat memahami bagaimana keputusan dihasilkan.
+
+Fleksibilitas: Algoritma SMART dapat digunakan dalam berbagai konteks, mulai dari penilaian kinerja karyawan hingga pemilihan proyek atau solusi bisnis lainnya.
+
+Kekurangan Algoritma SMART
+Subjektivitas: Meskipun pengguna dapat menentukan bobot dan nilai kriteria, proses ini tetap bersifat subjektif dan dapat dipengaruhi oleh bias individu.
+
+Tidak Mengatasi Interaksi Antar Kriteria: Algoritma SMART mengasumsikan bahwa kriteria independen satu sama lain. Ini bisa menjadi masalah jika ada interaksi atau ketergantungan antar kriteria yang signifikan.
+
+Keterbatasan dalam Penanganan Data Kualitatif: SMART lebih mudah diterapkan pada data kuantitatif. Penilaian kualitatif bisa menjadi lebih sulit dan kurang akurat ketika menggunakan metode ini.
+
+Tidak Cocok untuk Masalah Kompleks: Untuk masalah pengambilan keputusan yang sangat kompleks dengan banyak kriteria dan sub-kriteria, metode lain seperti AHP (Analytic Hierarchy Process) atau TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) mungkin lebih cocok.
+
+Normalisasi Data: Algoritma SMART memerlukan normalisasi data untuk memastikan bahwa skala penilaian konsisten. Proses normalisasi ini bisa menjadi tambahan kerja dan mempengaruhi hasil jika tidak dilakukan dengan benar.
 <?php
 include "../src/config.php";
 

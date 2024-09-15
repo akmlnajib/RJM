@@ -99,7 +99,6 @@
                             <?php
                             $sql = mysqli_query($conn, "SELECT a.nilai_subkriteria as sub FROM tb_subkriteria a, tb_nilai b WHERE a.id_subkriteria=b.id_subkriteria AND b.id_karyawan='$id' ORDER BY b.id_kriteria");
                             while ($rsql = mysqli_fetch_array($sql)) { ?>
-
                                 <td class="text-center">
                                     <?= $rsql['sub'] ?>
                                 </td>
@@ -188,7 +187,6 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         $id = $row['id_karyawan'];
                         $nama = $row['nama_karyawan'];
-
                         echo "<tr>";
                         echo "<td class='text-center'>$no</td>";
                         echo "<td class='text-center'>$nama</td>";
@@ -229,8 +227,6 @@
                         echo "</tr>";
                         $no++;
                     }
-                } else {
-                    echo "<tr><td colspan='3'>Tidak ada data karyawan</td></tr>";
                 }
                 ?>
             </tbody>

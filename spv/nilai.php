@@ -23,8 +23,11 @@ $h = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_kriteria"));
                 </tr>
                 <tr class="text-center">
                     <?php
-                    for ($n = 1; $n <= $h; $n++) {
-                        echo "<th class='text-center'>C{$n}</th>";
+                    $queryk= "SELECT * FROM tb_kriteria";
+                    $rk = mysqli_query($conn, $queryk);
+                    while ($rwk = mysqli_fetch_assoc($rk)){?>
+                        <th class='text-center'><?= $rwk['nama_kriteria']?></th>
+                        <?php
                     }
                     ?>
                 </tr>
@@ -34,16 +37,14 @@ $h = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_kriteria"));
                 $query = "SELECT * FROM tb_karyawan ORDER BY id_karyawan";
                 $result = mysqli_query($conn, $query);
                 if (mysqli_num_rows($result) > 0) {
-                    $no = 1;
+                $no = 1;
                     while ($row = mysqli_fetch_assoc($result)) {
                         $id = $row['id_karyawan'];
                         $nama = $row['nama_karyawan'];
                         $dnilai = mysqli_query($conn, "SELECT * FROM tb_nilai WHERE id_karyawan='$id'");
                         $dn = mysqli_fetch_array($dnilai);
                         echo "<tr>";
-
                         if (empty($dn['id_karyawan'])) {
-
                         } else {
                             ?>
                             <td class="text-center">
@@ -55,17 +56,14 @@ $h = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_kriteria"));
                             <?php
                             $sql = mysqli_query($conn, "SELECT nama_subkriteria, nilai_subkriteria FROM tb_subkriteria a, tb_nilai b WHERE a.id_subkriteria=b.id_subkriteria AND b.id_karyawan='$id' ORDER BY b.id_kriteria");
                             while ($rsql = mysqli_fetch_array($sql)) { ?>
-
                                 <td class="text-center">
                                     Bobot <?= $rsql['nilai_subkriteria'] ?> = <?= $rsql['nama_subkriteria'] ?>
                                 </td>
-
                                 <?php
                             }
                             ?>
                             </tr>
                             <?php
-                            $no++;
                         }
                     }
                 }
